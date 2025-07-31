@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /logs/
 Disallow: /prompt/
+Disallow: /code/
 Allow: / 
