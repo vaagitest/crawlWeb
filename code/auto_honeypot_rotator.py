@@ -50,6 +50,50 @@ class AutoHoneypotRotator:
             self.log_operation(f"Git {description} exception: {str(e)}", 'error')
             return False
     
+    def update_sitemap_and_hub_pages(self):
+        """Update sitemap.xml and hub pages with new URL mappings"""
+        try:
+            current_urls = self.rotator.get_current_urls()
+            
+            # Update sitemap.xml
+            if os.path.exists('sitemap.xml'):
+                with open('sitemap.xml', 'r') as f:
+                    sitemap_content = f.read()
+                
+                # Replace old URLs with new ones
+                for original, current in current_urls.items():
+                    if original in ['a-6hp.html', 'a-7sm.html']:
+                        # Update sitemap URLs
+                        old_url = f"https://ai-crawler.org/{original}"
+                        new_url = f"https://ai-crawler.org/{current}"
+                        sitemap_content = sitemap_content.replace(old_url, new_url)
+                
+                with open('sitemap.xml', 'w') as f:
+                    f.write(sitemap_content)
+                
+                self.log_operation("Updated sitemap.xml with new URL mappings")
+            
+            # Update hub pages
+            hub_pages = ['hp-1.html', 'hp-2.html']
+            for hub_page in hub_pages:
+                if os.path.exists(hub_page):
+                    with open(hub_page, 'r') as f:
+                        hub_content = f.read()
+                    
+                    # Update a-6hp.html references (only this one is in hub pages)
+                    if 'a-6hp.html' in current_urls:
+                        old_url = 'a-6hp.html'
+                        new_url = current_urls['a-6hp.html']
+                        hub_content = hub_content.replace(old_url, new_url)
+                    
+                    with open(hub_page, 'w') as f:
+                        f.write(hub_content)
+                    
+                    self.log_operation(f"Updated {hub_page} with new URL mappings")
+                    
+        except Exception as e:
+            self.log_operation(f"Error updating sitemap and hub pages: {str(e)}", 'error')
+    
     def update_commit_logs(self):
         """Update commit-logs.csv with the latest rotation"""
         try:
@@ -114,10 +158,13 @@ class AutoHoneypotRotator:
         if not self.run_git_command('git push origin main', 'push'):
             return False
         
-        # Step 5: Update commit logs
+        # Step 5: Update sitemap and hub pages
+        self.update_sitemap_and_hub_pages()
+        
+        # Step 6: Update commit logs
         self.update_commit_logs()
         
-        # Step 6: Commit the updated logs
+        # Step 7: Commit the updated logs
         if not self.run_git_command('git add logs/commit-logs.csv', 'add logs'):
             return False
         

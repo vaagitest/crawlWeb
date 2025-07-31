@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Crawler Testing Environment</title>
+    <title>AI Crawler Testing Environment - ai-crawler.org</title>
     <style>
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -14,7 +14,7 @@
             line-height: 1.6;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px;
             margin: 0 auto;
             background: white;
             border-radius: 15px;
@@ -74,55 +74,166 @@
             border-radius: 10px;
             margin-bottom: 30px;
         }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        .feature-card {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+        }
+        .feature-card h4 {
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .honeypot-notice {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            color: #856404;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .status-active {
+            background-color: #28a745;
+        }
+        .status-inactive {
+            background-color: #dc3545;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>🕷️ Web Crawler Testing Environment</h1>
-            <p>A comprehensive testing platform for web crawlers and search engines</p>
+            <h1>🕷️ AI Crawler Testing Environment</h1>
+            <p>Comprehensive web crawler testing platform with honeypot traps and automated URL rotation</p>
+            <p><strong>Domain:</strong> ai-crawler.org</p>
         </header>
         
         <div class="content">
             <div class="description">
-                <h2>Welcome to the Crawler Testing Environment</h2>
-                <p>This website is designed to test web crawlers and search engines. It contains multiple interconnected pages with various content types, navigation patterns, and structural elements to evaluate crawler behavior and performance.</p>
+                <h2>Welcome to the Advanced Crawler Testing Environment</h2>
+                <p>This sophisticated testing platform is designed to evaluate web crawlers, search engines, and automated bots. It features honeypot traps, automated URL rotation, comprehensive logging, and realistic content patterns.</p>
                 
-                <h3>Features:</h3>
-                <ul>
-                    <li><strong>Hub Pages:</strong> Main landing pages that link to multiple articles</li>
-                    <li><strong>Article Pages:</strong> Detailed content pages with rich information</li>
-                    <li><strong>Navigation:</strong> Cross-linked pages to test crawler following behavior</li>
-                    <li><strong>Images:</strong> Visual content to test media crawling</li>
-                    <li><strong>Robots.txt:</strong> Proper crawler directives for testing compliance</li>
-                </ul>
+                <div class="honeypot-notice">
+                    <strong>🔍 Honeypot System Active:</strong> This environment includes automated honeypot traps with URL rotation every 30 minutes to detect and monitor crawler activity.
+                </div>
+            </div>
+            
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h4>🚀 Hub Pages</h4>
+                    <p>Main landing pages with rich content and navigation patterns</p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>Tech News Hub (hp-1.html)</li>
+                        <li>Business News Hub (hp-2.html)</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>📄 Article Pages</h4>
+                    <p>Detailed content pages with cross-references</p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>5 Standard Articles (a-1.html to a-5.html)</li>
+                        <li>2 Honeypot Articles (a-6hp.html, a-7sm.html)</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🔍 Honeypot System</h4>
+                    <p>Advanced crawler detection and monitoring</p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>URL rotation every 30 minutes</li>
+                        <li>Automated git operations</li>
+                        <li>Comprehensive logging</li>
+                    </ul>
+                </div>
+                
+                <div class="feature-card">
+                    <h4>🛡️ Security Features</h4>
+                    <p>Protected directories and crawler controls</p>
+                    <ul style="text-align: left; font-size: 0.9em;">
+                        <li>robots.txt configuration</li>
+                        <li>Protected /logs/, /prompt/, /code/</li>
+                        <li>Selective crawler access</li>
+                    </ul>
+                </div>
             </div>
             
             <div class="hub-links">
                 <div class="hub-card">
                     <h3>🚀 Tech News Hub</h3>
-                    <p>Explore the latest technology trends, AI breakthroughs, and digital innovations. This hub contains articles about artificial intelligence, quantum computing, web development, and more.</p>
+                    <p>Explore the latest technology trends, AI breakthroughs, and digital innovations. This hub contains articles about artificial intelligence, quantum computing, web development, cybersecurity, and data science.</p>
                     <a href="hp-1.html">Visit Tech News Hub</a>
                 </div>
                 
                 <div class="hub-card">
                     <h3>💼 Business News Hub</h3>
-                    <p>Discover market insights, financial trends, and business strategies. This hub features articles about global markets, fintech, startups, and sustainable business practices.</p>
+                    <p>Discover market insights, financial trends, and business strategies. This hub features articles about global markets, fintech, startups, sustainable business practices, and digital transformation.</p>
                     <a href="hp-2.html">Visit Business News Hub</a>
                 </div>
             </div>
             
             <div style="margin-top: 40px; padding: 20px; background: #e8f4f8; border-radius: 10px;">
-                <h3>📋 Testing Information</h3>
-                <p><strong>URL Structure:</strong></p>
+                <h3>📋 Advanced Testing Information</h3>
+                
+                <h4>URL Structure:</h4>
                 <ul>
-                    <li>Hub pages: <code>hp-1.html</code>, <code>hp-2.html</code></li>
-                    <li>Article pages: <code>a-1.html</code> through <code>a-5.html</code></li>
-                    <li>Images: <code>/img/</code> directory</li>
-                    <li>Protected: <code>/logs/</code> and <code>/prompt/</code> directories (disallowed in robots.txt)</li>
+                    <li><strong>Hub pages:</strong> <code>hp-1.html</code>, <code>hp-2.html</code></li>
+                    <li><strong>Standard articles:</strong> <code>a-1.html</code> through <code>a-5.html</code></li>
+                    <li><strong>Honeypot articles:</strong> <code>a-6hp.html</code> (hub-referenced), <code>a-7sm.html</code> (sitemap-only)</li>
+                    <li><strong>Images:</strong> <code>/img/</code> directory with placeholder images</li>
+                    <li><strong>Protected:</strong> <code>/logs/</code>, <code>/prompt/</code>, <code>/code/</code> directories</li>
                 </ul>
                 
-                <p><strong>Navigation Pattern:</strong> Each hub page links to all 5 article pages, and each article page links back to the hub pages, creating a comprehensive network for crawler testing.</p>
+                <h4>Honeypot System:</h4>
+                <ul>
+                    <li><span class="status-indicator status-active"></span><strong>Automated URL rotation:</strong> Every 30 minutes via cron job</li>
+                    <li><strong>Prefix preservation:</strong> URLs maintain original prefixes (a-6hp-, a-7sm-)</li>
+                    <li><strong>Git integration:</strong> Automatic commits and pushes to mainline</li>
+                    <li><strong>Comprehensive logging:</strong> All operations tracked in logs/</li>
+                </ul>
+                
+                <h4>Navigation Pattern:</h4>
+                <ul>
+                    <li>Hub pages link to all article pages including honeypot pages</li>
+                    <li>Article pages cross-reference each other</li>
+                    <li>Sitemap includes all pages including honeypot pages</li>
+                    <li>robots.txt controls crawler access to protected directories</li>
+                </ul>
+                
+                <h4>Monitoring & Control:</h4>
+                <ul>
+                    <li><strong>Status check:</strong> <code>python3 code/manage_auto_rotation.py status</code></li>
+                    <li><strong>View logs:</strong> <code>python3 code/manage_auto_rotation.py logs</code></li>
+                    <li><strong>Test rotation:</strong> <code>python3 code/manage_auto_rotation.py test</code></li>
+                    <li><strong>Real-time monitoring:</strong> <code>tail -f logs/auto_rotation.log</code></li>
+                </ul>
+            </div>
+            
+            <div style="margin-top: 30px; padding: 20px; background: #f8f9fa; border-radius: 10px;">
+                <h3>🔧 Technical Features</h3>
+                <ul>
+                    <li><strong>Domain:</strong> ai-crawler.org (custom domain)</li>
+                    <li><strong>Sitemap:</strong> sitemap.xml with all pages</li>
+                    <li><strong>Robots.txt:</strong> Selective crawler access (Amazonbot, Googlebot only)</li>
+                    <li><strong>Automation:</strong> Cron job runs every 30 minutes</li>
+                    <li><strong>Logging:</strong> Comprehensive audit trail in logs/</li>
+                    <li><strong>Git Integration:</strong> Automatic commits and pushes</li>
+                    <li><strong>Error Handling:</strong> Robust error recovery and logging</li>
+                </ul>
             </div>
         </div>
     </div>
