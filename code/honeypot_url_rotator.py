@@ -19,11 +19,14 @@ class HoneypotURLRotator:
         self.current_urls = {}
         self.load_current_urls()
     
-    def generate_random_filename(self, prefix='a-'):
-        """Generate a random filename for the honeypot pages"""
+    def generate_random_filename(self, original_name):
+        """Generate a random filename for the honeypot pages with original prefix"""
+        # Extract prefix from original name (e.g., 'a-6hp' from 'a-6hp.html')
+        prefix = original_name.replace('.html', '')
+        
         # Generate random string
         random_suffix = ''.join(random.choices(string.ascii_lowercase + string.digits, k=6))
-        return f"{prefix}{random_suffix}.html"
+        return f"{prefix}-{random_suffix}.html"
     
     def load_current_urls(self):
         """Load current URL mappings from history file"""
@@ -56,12 +59,12 @@ class HoneypotURLRotator:
                 print(f"Warning: {page} does not exist, skipping...")
                 continue
             
-            # Generate new random filename
-            new_filename = self.generate_random_filename()
+            # Generate new random filename with original prefix
+            new_filename = self.generate_random_filename(page)
             
             # Ensure new filename doesn't conflict with existing files
             while os.path.exists(new_filename):
-                new_filename = self.generate_random_filename()
+                new_filename = self.generate_random_filename(page)
             
             # Move the file to new name
             try:

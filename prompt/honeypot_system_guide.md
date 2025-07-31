@@ -28,7 +28,7 @@ This system implements a sophisticated honeypot trap for web crawler testing. Tw
 ```
 Before: a-6hp.html, a-7sm.html
 After:  a-6hp.html, a-7sm.html (new files)
-       a-x7k9m2.html, a-y4n8p1.html (old files renamed)
+       a-6hp-x7k9m2.html, a-7sm-y4n8p1.html (old files renamed)
 ```
 
 ## Usage Instructions
