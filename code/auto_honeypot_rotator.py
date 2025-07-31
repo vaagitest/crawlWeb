@@ -60,13 +60,17 @@ class AutoHoneypotRotator:
                 with open('sitemap.xml', 'r') as f:
                     sitemap_content = f.read()
                 
-                # Replace old URLs with new ones
+                # Replace old URLs with new ones and update dates
+                current_date = datetime.now().strftime('%Y-%m-%d')
                 for original, current in current_urls.items():
                     if original in ['a-6hp.html', 'a-7sm.html']:
                         # Update sitemap URLs
                         old_url = f"https://ai-crawler.org/{original}"
                         new_url = f"https://ai-crawler.org/{current}"
                         sitemap_content = sitemap_content.replace(old_url, new_url)
+                
+                # Update lastmod dates for all pages
+                sitemap_content = sitemap_content.replace('<lastmod>2024-12-15</lastmod>', f'<lastmod>{current_date}</lastmod>')
                 
                 with open('sitemap.xml', 'w') as f:
                     f.write(sitemap_content)
