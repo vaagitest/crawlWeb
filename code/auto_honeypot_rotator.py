@@ -64,10 +64,19 @@ class AutoHoneypotRotator:
                 current_date = datetime.now().strftime('%Y-%m-%d')
                 for original, current in current_urls.items():
                     if original in ['a-6hp.html', 'a-7sm.html']:
-                        # Update sitemap URLs
-                        old_url = f"https://ai-crawler.org/{original}"
                         new_url = f"https://ai-crawler.org/{current}"
-                        sitemap_content = sitemap_content.replace(old_url, new_url)
+                        
+                        # Find and replace any existing honeypot URLs in sitemap
+                        # This handles both original and rotated URLs dynamically
+                        import re
+                        if original == 'a-6hp.html':
+                            # Replace any a-6hp-* URL with the new one
+                            pattern = r'https://ai-crawler\.org/a-6hp-[^"]*\.html'
+                            sitemap_content = re.sub(pattern, new_url, sitemap_content)
+                        elif original == 'a-7sm.html':
+                            # Replace any a-7sm-* URL with the new one
+                            pattern = r'https://ai-crawler\.org/a-7sm-[^"]*\.html'
+                            sitemap_content = re.sub(pattern, new_url, sitemap_content)
                 
                 # Update lastmod dates for all pages
                 sitemap_content = sitemap_content.replace('<lastmod>2024-12-15</lastmod>', f'<lastmod>{current_date}</lastmod>')
