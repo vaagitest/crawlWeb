@@ -54,29 +54,35 @@ class HoneypotURLRotator:
         """Rotate URLs for honeypot pages"""
         print(f"[{datetime.now()}] Starting URL rotation for honeypot pages...")
         
-        for page in self.honeypot_pages:
-            if not os.path.exists(page):
-                print(f"Warning: {page} does not exist, skipping...")
+        # Get current filenames from mappings or use original names
+        current_files = {}
+        for original_page in self.honeypot_pages:
+            current_file = self.current_urls.get(original_page, original_page)
+            if os.path.exists(current_file):
+                current_files[original_page] = current_file
+            else:
+                print(f"Warning: {current_file} does not exist, skipping...")
                 continue
-            
+        
+        for original_page, current_file in current_files.items():
             # Generate new random filename with original prefix
-            new_filename = self.generate_random_filename(page)
+            new_filename = self.generate_random_filename(original_page)
             
             # Ensure new filename doesn't conflict with existing files
             while os.path.exists(new_filename):
-                new_filename = self.generate_random_filename(page)
+                new_filename = self.generate_random_filename(original_page)
             
             # Move the file to new name
             try:
-                shutil.move(page, new_filename)
-                self.current_urls[page] = new_filename
-                print(f"Rotated {page} -> {new_filename}")
+                shutil.move(current_file, new_filename)
+                self.current_urls[original_page] = new_filename
+                print(f"Rotated {current_file} -> {new_filename}")
                 
                 # Log the rotation
-                self.log_rotation(page, new_filename)
+                self.log_rotation(current_file, new_filename)
                 
             except Exception as e:
-                print(f"Error rotating {page}: {e}")
+                print(f"Error rotating {current_file}: {e}")
         
         # Save updated mappings
         self.save_url_history()
