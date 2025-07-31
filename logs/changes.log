@@ -1,26 +1,68 @@
 # Website Change Log
 # Format: [TIMESTAMP] [URL] - [SUMMARY OF CHANGES]
 
-[2024-12-15 10:30:00] /robots.txt - Created robots.txt file to disallow crawling of /logs/ and /prompt/ directories
-[2024-12-15 10:30:00] /hp-1.html - Created Tech News Hub page with links to 5 article pages
-[2024-12-15 10:30:00] /hp-2.html - Created Business News Hub page with links to 5 article pages
-[2024-12-15 10:30:00] /a-1.html - Created article about Revolutionary AI Breakthrough
-[2024-12-15 10:30:00] /a-2.html - Created article about Quantum Computing Milestone
-[2024-12-15 10:30:00] /a-3.html - Created article about Web Development Trends 2024
-[2024-12-15 10:30:00] /a-4.html - Created article about Cybersecurity Innovations
-[2024-12-15 10:30:00] /a-5.html - Created article about Data Science Revolution
-[2024-12-15 10:30:00] /img/ - Created image directory with placeholder files
-[2024-12-15 10:30:00] /logs/ - Created logs directory for tracking changes
-[2024-12-15 10:30:00] /prompt/ - Created prompt directory for storing user prompts
-[2024-12-15 11:45:00] /hp-1.html - Updated to use actual images from img directory (image (7).png through image (11).png)
-[2024-12-15 11:45:00] /hp-2.html - Updated to use actual images from img directory (image (7).png through image (11).png)
-[2024-12-15 11:45:00] /a-1.html - Updated article image to use image (7).png with overlay
-[2024-12-15 11:45:00] /a-2.html - Updated article image to use image (8).png with overlay
-[2024-12-15 11:45:00] /a-3.html - Updated article image to use image (9).png with overlay
-[2024-12-15 11:45:00] /a-4.html - Updated article image to use image (10).png with overlay
-[2024-12-15 11:45:00] /a-5.html - Updated article image to use image (11).png with overlay
-[2024-12-15 12:00:00] /a-1.html - Added cross-references to all other article pages (a-2, a-3, a-4, a-5)
-[2024-12-15 12:00:00] /a-2.html - Added cross-references to all other article pages (a-1, a-3, a-4, a-5)
-[2024-12-15 12:00:00] /a-3.html - Added cross-references to all other article pages (a-1, a-2, a-4, a-5)
-[2024-12-15 12:00:00] /a-4.html - Added cross-references to all other article pages (a-1, a-2, a-3, a-5)
-[2024-12-15 12:00:00] /a-5.html - Added cross-references to all other article pages (a-1, a-2, a-3, a-4) 
+[2025-07-30 16:30:07] / - Initial commit - Repository created
+[2025-07-30 16:34:38] /CNAME - Created CNAME file for domain configuration
+[2025-07-30 16:35:17] /index.html - Created initial index.html test file
+[2025-07-30 16:44:41] /README.md - Deleted README.md file
+[2025-07-31 10:04:23] /robots.txt - Created robots.txt file to disallow crawling of /logs/ and /prompt/ directories
+[2025-07-31 10:04:23] /hp-1.html - Created Tech News Hub page with links to 5 article pages
+[2025-07-31 10:04:23] /hp-2.html - Created Business News Hub page with links to 5 article pages
+[2025-07-31 10:04:23] /a-1.html - Created article about Revolutionary AI Breakthrough
+[2025-07-31 10:04:23] /a-2.html - Created article about Quantum Computing Milestone
+[2025-07-31 10:04:23] /a-3.html - Created article about Web Development Trends 2024
+[2025-07-31 10:04:23] /a-4.html - Created article about Cybersecurity Innovations
+[2025-07-31 10:04:23] /a-5.html - Created article about Data Science Revolution
+[2025-07-31 10:04:23] /img/ - Created image directory with placeholder files
+[2025-07-31 10:04:23] /logs/ - Created logs directory for tracking changes
+[2025-07-31 10:04:23] /prompt/ - Created prompt directory for storing user prompts
+[2025-07-31 10:07:03] /img/ - Compressed images to reduce repository size
+[2025-07-31 10:10:38] /hp-1.html - Updated image references from large PNG files to small JPEG placeholders
+[2025-07-31 10:10:38] /hp-2.html - Updated image references from large PNG files to small JPEG placeholders
+[2025-07-31 10:10:38] /a-1.html - Updated image reference from image (7).png to image-1.jpg
+[2025-07-31 10:10:38] /a-2.html - Updated image reference from image (8).png to image-2.jpg
+[2025-07-31 10:10:38] /a-3.html - Updated image reference from image (9).png to image-3.jpg
+[2025-07-31 10:10:38] /a-4.html - Updated image reference from image (10).png to image-4.jpg
+[2025-07-31 10:10:38] /a-5.html - Updated image reference from image (11).png to image-5.jpg
+[2025-07-31 10:10:38] /img/ - Replaced large PNG images (1.2-1.6MB each) with small JPEG placeholders (2.6-3.4KB each)
+[2025-07-31 10:13:17] /.gitignore - Added comprehensive .gitignore to exclude virtual environment and other unnecessary files
+[2025-07-31 10:16:26] /index.html - Updated main entry point with improved navigation and descriptions
+[2025-07-31 10:16:26] /logs/commit-logs.csv - Updated with latest commit tracking
+[2025-07-31 10:16:26] /git_history - Successfully cleaned git history using git-filter-repo to remove large PNG files (1.2-1.6MB each) from entire repository history
+[2025-07-31 10:16:26] /repository_size - Reduced repository size from 8.7MB to 176KB by removing large files from git history
+[2025-07-31 10:17:59] /logs/commit-logs.csv - Updated with git history cleanup entry
+[2025-07-31 10:19:59] /robots.txt - Added /code/ directory to disallow list for crawler access control
+[2025-07-31 10:19:59] /code/ - Created code directory and moved Python files (compress_images.py, create_placeholders.py) from root directory
+[2025-07-31 10:19:59] /compress_images.py - Moved from root to code/ directory
+[2025-07-31 10:19:59] /create_placeholders.py - Moved from root to code/ directory
+[2025-07-31 10:20:42] /logs/commit-logs.csv - Updated with code directory reorganization
+[2025-07-31 10:22:24] /sitemap.xml - Created sitemap.xml for web crawler testing environment with all pages
+[2025-07-31 10:24:17] /prompt/web_crawlers_reference.md - Created comprehensive web crawlers reference guide with major crawler categories and characteristics
+[2025-07-31 10:26:05] /robots.txt - Updated to only allow Amazonbot and Google crawlers while disallowing all others
+[2025-07-31 10:28:13] /robots.txt - Updated to disallow logs, prompt, and code directories for all crawlers including Amazonbot and Google
+[2025-07-31 10:33:06] /sitemap.xml - Updated all URLs to use ai-crawler.org domain instead of GitHub Pages URL
+[2025-07-31 10:33:06] /domain - Migrated from vaagitest.github.io/crawlWeb to ai-crawler.org for professional domain usage
+[2025-07-31 10:49:04] /a-6hp.html - Created hub-referenced honeypot page with Advanced Machine Learning content
+[2025-07-31 10:49:04] /a-7sm.html - Created sitemap-only honeypot page with Emerging AI Technologies content
+[2025-07-31 10:49:04] /hp-1.html - Added link to a-6hp.html honeypot page
+[2025-07-31 10:49:04] /hp-2.html - Added link to a-6hp.html honeypot page
+[2025-07-31 10:49:04] /sitemap.xml - Added both honeypot pages (a-6hp.html, a-7sm.html) to sitemap
+[2025-07-31 10:49:04] /code/honeypot_url_rotator.py - Created URL rotation system with prefix preservation (a-6hp-, a-7sm-)
+[2025-07-31 10:49:04] /code/honeypot_monitor.py - Created monitoring and analysis system for crawler detection
+[2025-07-31 10:49:04] /code/create_additional_placeholders.py - Created script to generate placeholder images for honeypot pages
+[2025-07-31 10:49:04] /img/image-6.jpg - Generated placeholder image for a-6hp.html
+[2025-07-31 10:49:04] /img/image-7.jpg - Generated placeholder image for a-7sm.html
+[2025-07-31 10:49:04] /prompt/honeypot_system_guide.md - Created comprehensive documentation for honeypot system
+[2025-07-31 11:04:52] /code/honeypot_url_rotator.py - Updated generate_random_filename to preserve original prefixes (a-6hp-, a-7sm-) for better tracking
+[2025-07-31 11:04:52] /prompt/honeypot_system_guide.md - Updated documentation to reflect new naming convention with prefix preservation
+[2025-07-31 11:10:39] /code/auto_honeypot_rotator.py - Created automated rotation system that runs every 30 minutes via cron job
+[2025-07-31 11:10:39] /code/setup_cron_job.sh - Created script to install cron job for automated execution
+[2025-07-31 11:10:39] /code/manage_auto_rotation.py - Created management system for controlling and monitoring automated rotation
+[2025-07-31 11:10:39] /prompt/automated_rotation_guide.md - Created comprehensive documentation for automated rotation system
+[2025-07-31 11:10:39] /automation - Implemented full automation with git operations, logging, and error handling
+[2025-07-31 11:13:24] /prompt/installation_and_usage_instructions.md - Created comprehensive installation and usage instructions for automated honeypot rotation system
+[2025-07-31 11:13:24] /documentation - Added detailed setup, monitoring, and troubleshooting guides
+[2025-07-31 11:19:50] /code/auto_honeypot_rotator.py - Enhanced automated rotation to update sitemap.xml and hub pages with new URL mappings
+[2025-07-31 11:19:50] /index.html - Completely updated with comprehensive feature overview including honeypot system, monitoring commands, and technical features
+[2025-07-31 11:19:50] /automation - Added sitemap and hub page synchronization to automated rotation cycle
+[2025-07-31 11:19:50] /documentation - Updated index.html to reflect all current capabilities including automated URL rotation, logging, and security features 
