@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech News Hub - Latest Updates</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(45deg, #2c3e50, #3498db);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        .article-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #f39c12, #e74c3c);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .article-content {
+            padding: 20px;
+        }
+        .article-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .article-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .read-more {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #3498db, #2980b9);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .read-more:hover {
+            background: linear-gradient(45deg, #2980b9, #1f5f8b);
+        }
+        .hub-links {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+        .hub-links a {
+            margin-right: 20px;
+            color: #3498db;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hub-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🚀 Tech News Hub</h1>
+            <p>Your gateway to the latest technology insights and innovations</p>
+        </header>
+        
+        <div class="article-grid">
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (7).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">📱</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Revolutionary AI Breakthrough</h3>
+                    <p class="article-excerpt">Scientists discover new neural network architecture that could revolutionize machine learning applications across industries.</p>
+                    <a href="a-1.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (8).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">💻</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Quantum Computing Milestone</h3>
+                    <p class="article-excerpt">Major breakthrough in quantum computing brings us closer to solving complex problems that were previously impossible.</p>
+                    <a href="a-2.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (9).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">🌐</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Web Development Trends 2024</h3>
+                    <p class="article-excerpt">Explore the latest trends in web development that are shaping the future of digital experiences.</p>
+                    <a href="a-3.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (10).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">🔒</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Cybersecurity Innovations</h3>
+                    <p class="article-excerpt">New security protocols and technologies that are protecting digital assets in an increasingly connected world.</p>
+                    <a href="a-4.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (11).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">📊</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Data Science Revolution</h3>
+                    <p class="article-excerpt">How big data and analytics are transforming business decision-making processes worldwide.</p>
+                    <a href="a-5.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hub-links">
+            <a href="hp-2.html">📰 Business News Hub</a>
+            <a href="hp-1.html">🏠 Home</a>
+        </div>
+    </div>
+</body>
+</html> 

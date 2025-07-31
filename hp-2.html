@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business News Hub - Market Insights</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        header {
+            background: linear-gradient(45deg, #1a1a1a, #4a4a4a);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 30px;
+        }
+        .article-card {
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+        }
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .article-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        .article-content {
+            padding: 20px;
+        }
+        .article-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        .article-excerpt {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        .read-more {
+            display: inline-block;
+            padding: 8px 16px;
+            background: linear-gradient(45deg, #27ae60, #2ecc71);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+        .read-more:hover {
+            background: linear-gradient(45deg, #2ecc71, #27ae60);
+        }
+        .hub-links {
+            padding: 20px 30px;
+            background: #f8f9fa;
+            border-top: 1px solid #e0e0e0;
+        }
+        .hub-links a {
+            margin-right: 20px;
+            color: #27ae60;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        .hub-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>💼 Business News Hub</h1>
+            <p>Your source for market insights, financial trends, and business strategies</p>
+        </header>
+        
+        <div class="article-grid">
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (7).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">📈</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Global Market Trends</h3>
+                    <p class="article-excerpt">Analysis of emerging market trends and their impact on international business strategies and investment opportunities.</p>
+                    <a href="a-1.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (8).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">🏦</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Fintech Revolution</h3>
+                    <p class="article-excerpt">How financial technology is reshaping banking, payments, and investment services worldwide.</p>
+                    <a href="a-2.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (9).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">🚀</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Startup Ecosystem</h3>
+                    <p class="article-excerpt">Exploring the latest innovations and success stories in the global startup ecosystem.</p>
+                    <a href="a-3.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (10).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">🌍</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Sustainable Business</h3>
+                    <p class="article-excerpt">Companies leading the way in sustainable business practices and environmental responsibility.</p>
+                    <a href="a-4.html" class="read-more">Read More</a>
+                </div>
+            </div>
+            
+            <div class="article-card">
+                <div class="article-image" style="background-image: url('img/image (11).png');">
+                    <div style="background: rgba(0,0,0,0.5); padding: 10px; border-radius: 5px;">
+                        <span style="font-size: 16px;">📊</span>
+                    </div>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Digital Transformation</h3>
+                    <p class="article-excerpt">How traditional businesses are adapting to the digital age and leveraging technology for growth.</p>
+                    <a href="a-5.html" class="read-more">Read More</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hub-links">
+            <a href="hp-1.html">🚀 Tech News Hub</a>
+            <a href="hp-2.html">🏠 Home</a>
+        </div>
+    </div>
+</body>
+</html> 
