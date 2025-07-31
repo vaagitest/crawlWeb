@@ -1,17 +1,32 @@
-# Allow only Amazonbot and Google crawlers
+# Allow only Amazonbot and Google crawlers, but disallow sensitive directories
 User-agent: Amazonbot
+Disallow: /logs/
+Disallow: /prompt/
+Disallow: /code/
 Allow: /
 
 User-agent: Googlebot
+Disallow: /logs/
+Disallow: /prompt/
+Disallow: /code/
 Allow: /
 
 User-agent: Googlebot-Image
+Disallow: /logs/
+Disallow: /prompt/
+Disallow: /code/
 Allow: /
 
 User-agent: Googlebot-News
+Disallow: /logs/
+Disallow: /prompt/
+Disallow: /code/
 Allow: /
 
 User-agent: Googlebot-Video
+Disallow: /logs/
+Disallow: /prompt/
+Disallow: /code/
 Allow: /
 
 # Disallow all other crawlers
